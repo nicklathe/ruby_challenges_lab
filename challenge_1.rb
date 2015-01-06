@@ -12,7 +12,6 @@ if get_temp == 1
 elsif get_temp == 2
 	puts "Enter a Farenheit Temperature: "
 	far = gets.chomp.to_i
-	# far_to_cel = (far - 32) * (5 / 9)
 	far_to_cel = (far - 32) * 5 / 9
 	puts "#{far} degrees Farenheit is equal to #{far_to_cel} degrees Celcius"
 end

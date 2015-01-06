@@ -5,6 +5,7 @@ def build_classroom
 	new_student = gets.chomp.to_s
 	@students.push(new_student)
 	puts "#{new_student} added to class."
+	puts "Current classlist: #{@students.inspect}."
 end
 
 add_student = true
@@ -17,8 +18,12 @@ until add_student == false do
 	if answer == "yes"
 		build_classroom
 	else
-		puts "The array of students is: #{@students}"
-		add_student = false
+		# puts "The array of students is: #{@students.inspect}"
+		puts "Class list: "
+		@students.sort.each_with_index do |item, index|
+			puts "Student #{index}: #{item}"
+			add_student = false
+		end
 	end
 end
 
