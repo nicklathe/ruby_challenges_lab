@@ -18,7 +18,6 @@ until add_student == false do
 	if answer == "yes"
 		build_classroom
 	else
-		# puts "The array of students is: #{@students.inspect}"
 		puts "Class list: "
 		@students.sort.each_with_index do |item, index|
 			puts "Student #{index}: #{item}"
